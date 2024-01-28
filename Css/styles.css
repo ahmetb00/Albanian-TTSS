@@ -1,0 +1,157 @@
+body {
+    font-family: 'Courier New', Courier, monospace; /* Specifying a monospace font stack */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;   
+    margin: 0;
+}
+
+.bigBody{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar button {
+    width: 100%; /* Make buttons inside sidebar full width */
+}
+
+.sideDiv {
+    width: 100%;
+}
+
+.section {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+.divChecker {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.checker {
+    text-align: center;
+    text-decoration: underline;
+    color: #7C4A45;
+    font-style: italic;    
+}
+
+.checker:hover {
+    cursor: pointer;
+    color: #000000;
+}
+
+#ttsInput {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    display: block;
+    font-size: 18px;
+}
+
+#customise-options {
+    text-align: center;
+}
+
+select, label, input {
+    display: inline-block;
+}
+
+#voice-label {
+    margin-top: 25px;
+    margin-left: 0px;
+    font-weight: bold;
+}
+
+#voice-container {
+    margin-top: 15px;
+}
+
+#select-voice {
+    margin-top: 5px;
+    display: inline-block;
+}
+
+#speed-label {
+    margin-top: 25px;
+    margin-left: 15px;
+    font-weight: bold;    
+}
+
+#speed-container {
+    margin-top: 25px;
+}
+
+#select-speed {
+    margin-top: 2px;
+}
+
+.button-row {
+    margin-top: 30px;
+    text-align: center;    
+}
+
+#stop-button {
+    margin-left: 0px;
+}
+
+#speak-button {
+    margin-left: 15px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#links {
+    text-align: center;
+}
+
+#links  a {
+    text-decoration: none;
+}
+
+#links li {
+    list-style: none;
+    display: inline;
+}
+
+#links img {
+    height: 40px;
+    width: 40px;
+    margin-right: 40px;
+}
+
+img:hover {
+    border-radius: 20%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center; 
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.license {
+    position: auto;
+    margin: 0 auto;
+}

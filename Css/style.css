@@ -13,7 +13,7 @@ body{
   justify-content: center;
   background: #7d2ae8;
   padding: 30px;
-  background-image: url('images/background.png');
+  background-image: url('../Images/background.png');
   background-size: cover; /* Adjust as needed */
   background-position: center; /* Adjust as needed */
   background-repeat: no-repeat;

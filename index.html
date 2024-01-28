@@ -1,79 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="validation.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  </head>
-  <body>
-    <div class="container">
-      <input type="checkbox" id="flip">
-      <div class="cover">
-        <div class="front">
-          <img src="images/frontImg.jpg" alt="">
-          <div class="text">
-            <span class="text-1">You just write and <br> and we speak for you!</span>
-            <span class="text-2">Let's get connected</span>
-          </div>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online TTS</title>
+    <link rel="stylesheet" type="text/css" href="Css/topcoat-mobile-light.min.css">
+    <link rel="stylesheet" type="text/css" href="Css/styles.css">
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=R06QTECg"></script>
+    <script type="text/javascript" src="Js/mousetrap.min.js"></script>
+    <script type="text/javascript" src="Js/app.js"></script>
+</head>
+<body>
+    <div class="bigBody">
+        <div class="sidebar">
+            <br><br><hr>
+            <button onclick="login()">Login</button>
+            <button onclick="logout()">Logout</button>
         </div>
-        <div class="back">
-          <img class="backImg" src="images/backImg.jpg" alt="">
-          <div class="text">
-            <span class="text-11">Start miles of journeys <br> with one step</span>
-            <span class="text-22">Let's get started</span>
-          </div>
+        <div class="sideDiv">
+            <header>
+                <div class="topcoat-navigation-bar">
+                    <div class="topcoat-navigation-bar__item center full">
+                        <h1 class="topcoat-navigation-bar__title">Albanian TTS</h1>
+                    </div>         
+                </div>    
+            </header>    
+            <div class="divChecker">
+                <div></div>
+                <div><h3 class="checker" onclick="checkSupport()">( check your browser compatibility )</h3></div>
+                <div></div>
+            </div>
+            <section class="section">
+                <textarea id="ttsInput" class="topcoat-textarea mousetrap" placeholder="Write or Paste anything here, and press the speak button to convert text into speech !!!"></textarea>             
+                <div id="customise-options">
+                    <label id="voice-label">
+                        Select voice :
+                        <div id="voice-container">
+                            <select id="select-voice">
+                                <option value="1">UK Female</option>
+                                <option value="2">UK Male</option>
+                                <option value="3">Albanian Female</option>
+                                <option value="4">Albanian Male</option>                                  
+                            </select>                      
+                        </div>
+                    </label>   
+                    <label id="speed-label">
+                        Select speech speed :
+                        <div id="speed-container">
+                            <input id="select-speed" type="range" class="topcoat-range" min="0" max="1.5" value="1" step="0.1" onchange="setSpeed(this.value)">
+                        </div>
+                    </label>                                  
+                </div>
+                <div class="button-row">
+                    <button id="stop-button" class="topcoat-button" onclick="stopSpeech()">STOP</button>
+                    <button id="speak-button" class="topcoat-button--cta" onclick="startSpeech()" >SPEAK</button>            
+                </div>
+                <div id="links">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/ahmetb00/Albanian-TTSS" target="_blank">
+                                <img src="images/github.png" alt="Logo of github Octocat anchoring to the GitHub page of Albanian-TTSS">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </div>
-      </div>
-      <div class="forms">
-        <div class="form-content">
-          <div class="login-form">
-            <div class="title">Login</div>
-            <form name="loginForm" action="#" onsubmit="return validateLoginForm()">
-              <div class="input-boxes">
-                <div class="input-box">
-                  <i class="fas fa-envelope"></i>
-                  <input type="text" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-box">
-                  <i class="fas fa-lock"></i>
-                  <input type="password" name="password" placeholder="Enter your password" required>
-                </div>
-                <div class="text"><a href="#">Forgot password?</a></div>
-                <div class="button input-box">
-                  <input type="submit" value="Sumbit">
-                </div>
-                <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
-              </div>
-            </form>
-          </div>
-          <div class="signup-form">
-            <div class="title">Signup</div>
-            <form name="signupForm" action="#" onsubmit="return validateSignupForm()">
-              <div class="input-boxes">
-                <div class="input-box">
-                  <i class="fas fa-user"></i>
-                  <input type="text" name="name" placeholder="Enter your name" required>
-                </div>
-                <div class="input-box">
-                  <i class="fas fa-envelope"></i>
-                  <input type="text" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-box">
-                  <i class="fas fa-lock"></i>
-                  <input type="password" name="password" placeholder="Enter your password" required>
-                </div>
-                <div class="button input-box">
-                  <input type="submit" value="Sumbit">
-                </div>
-                <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
     </div>
-  </body>
+</body>
 </html>
