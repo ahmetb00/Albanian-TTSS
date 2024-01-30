@@ -1,0 +1,10 @@
+CREATE DATABASE albanian_tts;
+
+CREATE TABLE users(
+	user_ID int NOT NULL,
+	password VARCHAR(20) NOT NULL,
+	name VARCHAR(20) NOT NULL,
+	email VARCHAR(20) NOT NULL,
+	role VARCHAR(20) NOT NULL,
+	PRIMARY KEY(user_ID)
+);
