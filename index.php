@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +13,51 @@
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=R06QTECg"></script>
     <script type="text/javascript" src="Js/mousetrap.min.js"></script>
     <script type="text/javascript" src="Js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function logout() {
+        // Make an AJAX request to logout.php
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "DB&OOP/logout.php", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Redirect to index.php after successful logout
+                window.location.href = 'index.php';
+            }
+            };
+            xhr.send();
+        }
+        function login() {
+            window.location.href = 'log&reg.php';
+        }
+    </script>
 </head>
 <body>
+<?php
+    if (isset($_GET['message'])) :
+        echo '<script>
+              function showAlert(message) {
+                Swal.fire({
+                    icon: "warning",
+                    title: "Alert",
+                    text: message,
+                });
+              }
+              showAlert("' . $_GET['message'] . '");
+              </script>';
+    endif;
+    ?>
     <div class="bigBody">
         <div class="sidebar">
             <br><br><hr>
-            <button onclick="login()">Login</button>
-            <button onclick="logout()">Logout</button>
+            <?php
+				if(isset($_SESSION['name']) || isset($_SESSION['email'])){ ?>
+                    <button onclick="logout()">Logout</button>
+			<?php
+				}else{?>
+                    <button onclick="login()">Login</button>
+			<?php }?>
         </div>
         <div class="sideDiv">
             <header>

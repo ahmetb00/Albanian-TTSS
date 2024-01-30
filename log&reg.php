@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION['email'])){
+	header("Location: index.php?message=Ju jeni te loguar ne App!");
+  exit();
+}else{
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -9,6 +17,20 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
+  <?php
+    if (isset($_GET['message'])) :
+        echo '<script>
+              function showAlert(message) {
+                Swal.fire({
+                    icon: "warning",
+                    title: "Alert",
+                    text: message,
+                });
+              }
+              showAlert("' . $_GET['message'] . '");
+              </script>';
+    endif;
+  ?>
     <div class="container">
       <input type="checkbox" id="flip">
       <div class="cover">
@@ -31,7 +53,7 @@
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-            <form name="loginForm" action="index.html" onsubmit="return validateLoginForm()">
+            <form name="loginForm" action="DB&OOP/loginDB.php" onsubmit="return validateLoginForm()" method="POST">
               <div class="input-boxes">
                 <div class="input-box">
                   <i class="fas fa-envelope"></i>
@@ -43,7 +65,7 @@
                 </div>
                 <div class="text"><a href="#">Forgot password?</a></div>
                 <div class="button input-box">
-                  <input type="submit" value="Sumbit">
+                  <input type="submit" name="loginBtn" value="Sumbit">
                 </div>
                 <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
               </div>
@@ -51,7 +73,7 @@
           </div>
           <div class="signup-form">
             <div class="title">Signup</div>
-            <form name="signupForm" action="index.html" onsubmit="return validateSignupForm()">
+            <form name="signupForm" action="DB&OOP/controller/registerController.php" onsubmit="return validateSignupForm()" method="POST">
               <div class="input-boxes">
                 <div class="input-box">
                   <i class="fas fa-user"></i>
@@ -66,7 +88,7 @@
                   <input type="password" name="password" placeholder="Enter your password" required>
                 </div>
                 <div class="button input-box">
-                  <input type="submit" value="Sumbit">
+                  <input type="submit" name="registerBtn" value="register">
                 </div>
                 <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
               </div>
@@ -77,3 +99,6 @@
     </div>
   </body>
 </html>
+<?php
+}
+?>
