@@ -40,10 +40,10 @@ function validateSignupForm() {
     }
   
     if (password == "") {
-      showAlert("Please enter your password");
+      showAlert("Ju lutem shënoni fjalëkalimin tuaj");
       return false;
     } else if (password.length < 8 || password.length > 12) {
-        showAlert("Password should be between 8 and 12 characters");
+        showAlert("Fjalëkalimi duhet jetë nga 8 deri 12 karaktere");
         return false;
     }
   
