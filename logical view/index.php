@@ -53,10 +53,10 @@ session_start();
             <br><br><hr>
             <?php
 				if(isset($_SESSION['name']) || isset($_SESSION['email'])){ ?>
-                    <button onclick="logout()">Logout</button>
+                    <button onclick="logout()">Shkyçu</button>
 			<?php
 				}else{?>
-                    <button onclick="login()">Login</button>
+                    <button onclick="login()">Identifikohu</button>
 			<?php }?>
         </div>
         <div class="sideDiv">
@@ -69,14 +69,14 @@ session_start();
             </header>    
             <div class="divChecker">
                 <div></div>
-                <div><h3 class="checker" onclick="checkSupport()">( check your browser compatibility )</h3></div>
+                <div><h3 class="checker" onclick="checkSupport()">( Sigurohu që shfletuesi është i gatshëm për përdorim )</h3></div>
                 <div></div>
             </div>
             <section class="section">
-                <textarea id="ttsInput" class="topcoat-textarea mousetrap" placeholder="Write or Paste anything here, and press the speak button to convert text into speech !!!"></textarea>             
+                <textarea id="ttsInput" class="topcoat-textarea mousetrap" placeholder="Shkruaj apo kopjo tekst këtu, pastaj shtyp butonin FOL për ta konvertuar tekstin në zë..!"></textarea>             
                 <div id="customise-options">
                     <label id="voice-label">
-                        Select voice :
+                        Selekto folësin :
                         <div id="voice-container">
                             <select id="select-voice">
                                 <option value="1">UK Female</option>
@@ -87,15 +87,15 @@ session_start();
                         </div>
                     </label>   
                     <label id="speed-label">
-                        Select speech speed :
+                        Selekto shpejtësinë e të folurit :
                         <div id="speed-container">
                             <input id="select-speed" type="range" class="topcoat-range" min="0" max="1.5" value="1" step="0.1" onchange="setSpeed(this.value)">
                         </div>
                     </label>                                  
                 </div>
                 <div class="button-row">
-                    <button id="stop-button" class="topcoat-button" onclick="stopSpeech()">STOP</button>
-                    <button id="speak-button" class="topcoat-button--cta" onclick="startSpeech()" >SPEAK</button>            
+                    <button id="stop-button" class="topcoat-button" onclick="stopSpeech()">NDALO</button>
+                    <button id="speak-button" class="topcoat-button--cta" onclick="startSpeech()" >FOL</button>            
                 </div>
                 <div id="links">
                     <ul>
