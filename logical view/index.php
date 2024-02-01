@@ -14,7 +14,17 @@ session_start();
     <script type="text/javascript" src="Js/mousetrap.min.js"></script>
     <script type="text/javascript" src="Js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
+        function validateForm() {
+            var clickedButton = document.getElementById('clicked-button').value;
+    
+            if (clickedButton === 'ruaj') {
+                return true;
+            } else {
+                return false;
+            }
+        }
         function logout() {
         // Make an AJAX request to logout.php
             var xhr = new XMLHttpRequest();
@@ -29,7 +39,7 @@ session_start();
             xhr.send();
         }
         function login() {
-            window.location.href = 'log&reg.php';
+            window.location.href = 'DB&OOP/view/log&reg.php';
         }
     </script>
 </head>
@@ -54,6 +64,7 @@ session_start();
             <?php
 				if(isset($_SESSION['name']) || isset($_SESSION['email'])){ ?>
                     <button onclick="logout()">Shkyçu</button>
+                    <button onclick="window.location.href='DB&OOP/view/savedTexts.php'" class="button-link">Shiko tekstet e ruajtura</button>
 			<?php
 				}else{?>
                     <button onclick="login()">Identifikohu</button>
@@ -73,30 +84,36 @@ session_start();
                 <div></div>
             </div>
             <section class="section">
-                <textarea id="ttsInput" class="topcoat-textarea mousetrap" placeholder="Shkruaj apo kopjo tekst këtu, pastaj shtyp butonin FOL për ta konvertuar tekstin në zë..!"></textarea>             
-                <div id="customise-options">
-                    <label id="voice-label">
-                        Selekto folësin :
-                        <div id="voice-container">
-                            <select id="select-voice">
-                                <option value="1">UK Female</option>
-                                <option value="2">UK Male</option>
-                                <option value="3">Albanian Female</option>
-                                <option value="4">Albanian Male</option>                                  
-                            </select>                      
-                        </div>
-                    </label>   
-                    <label id="speed-label">
-                        Selekto shpejtësinë e të folurit :
-                        <div id="speed-container">
-                            <input id="select-speed" type="range" class="topcoat-range" min="0" max="1.5" value="1" step="0.1" onchange="setSpeed(this.value)">
-                        </div>
-                    </label>                                  
-                </div>
-                <div class="button-row">
-                    <button id="stop-button" class="topcoat-button" onclick="stopSpeech()">NDALO</button>
-                    <button id="speak-button" class="topcoat-button--cta" onclick="startSpeech()" >FOL</button>            
-                </div>
+                <form action="DB&OOP/repository/ttsRepository.php" onsubmit="return validateForm()" method="POST">
+                    <textarea id="ttsInput" name="ttsInput" class="topcoat-textarea mousetrap" placeholder="Shkruaj apo kopjo tekst këtu, pastaj shtyp butonin FOL për ta konvertuar tekstin në zë..!"></textarea>
+
+                    <div id="customise-options">
+                        <label id="voice-label">
+                            Selekto folësin :
+                            <div id="voice-container">
+                                <select id="select-voice" name="language">
+                                    <option value="1">UK Female</option>
+                                    <option value="2">UK Male</option>
+                                    <option value="3">Albanian Female</option>
+                                    <option value="4">Albanian Male</option>                                  
+                                </select>                      
+                            </div>
+                        </label>   
+                        <label id="speed-label">
+                            Selekto shpejtësinë e të folurit :
+                            <div id="speed-container">
+                                <input id="select-speed" type="range" class="topcoat-range" min="0" max="1.5" value="1" step="0.1" onchange="setSpeed(this.value)">
+                            </div>
+                        </label>                                  
+                    </div>
+
+                    <div class="button-row">
+                        <button id="stop-button" class="topcoat-button" onclick="stopSpeech()">NDALO</button>
+                        <button id="speak-button" class="topcoat-button--cta" onclick="startSpeech()">FOL</button> 
+                        <button id="save-button" type="submit" class="topcoat-button" name="saveBtn" onclick="document.getElementById('clicked-button').value = 'ruaj';">RUAJ</button>
+                        <input type="hidden" id="clicked-button" name="clickedButton" value="">         
+                    </div>
+                </form>
                 <div id="links">
                     <ul>
                         <li>

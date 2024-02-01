@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-include_once "db_conn.php";
+include_once "../db_conn.php";
 
 //shikojme nese email dhe password eshte shkruar ne formen e login
 if (isset($_POST['loginBtn'])){
@@ -37,13 +37,13 @@ if (isset($_POST['loginBtn'])){
 
             if ($user) {
                 $_SESSION['name'] = $user['name'];
-                $_SESSION['id'] = $user['user_ID'];
+                $_SESSION['user_id'] = $user['user_ID'];
                 $_SESSION['role'] = $user['role'];
                 $_SESSION['email'] = $user['email'];
-                header("Location: ../index.php");
+                header("Location: ../../index.php");
                 exit();
             } else {
-                header("Location: ../log&reg.php?message=Incorrect email or password!");
+                header("Location: ../view/log&reg.php?message=Passwordi ose fjalkalimi gabim!");
                 exit();
             }
         } catch (PDOException $e) {
@@ -52,6 +52,6 @@ if (isset($_POST['loginBtn'])){
         }
 	}
 }else{
-    header("Location: ../../log&reg.php?message=Keni shkruar passwordin ose email gabim!");
+    header("Location: ../view/log&reg.php?message=Keni shkruar passwordin ose email gabim!");
 	exit();
 }
