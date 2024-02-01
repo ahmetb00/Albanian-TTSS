@@ -57,15 +57,15 @@ if(isset($_SESSION['email'])){
               <div class="input-boxes">
                 <div class="input-box">
                   <i class="fas fa-envelope"></i>
-                  <input type="text" name="email" placeholder="Enter your email" required>
+                  <input type="text" name="email" placeholder="Shëno emailin tuaj" required>
                 </div>
                 <div class="input-box">
                   <i class="fas fa-lock"></i>
-                  <input type="password" name="password" placeholder="Enter your password" required>
+                  <input type="password" name="password" placeholder="Shëno fjalëkalimin tuaj" required>
                 </div>
                 <div class="text"><a href="#">Keni harruar fjalëkalimin?</a></div>
                 <div class="button input-box">
-                  <input type="submit" name="loginBtn" value="Sumbit">
+                  <input type="submit" name="loginBtn" value="Kyqu">
                 </div>
                 <div class="text sign-up-text">Nuk keni llogari? <label for="flip">Regjistrohuni tani</label></div>
               </div>
