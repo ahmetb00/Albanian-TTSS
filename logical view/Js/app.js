@@ -1,14 +1,35 @@
+// Text Processor Factory
+var TextProcessorFactory = {
+    createProcessor: function () {
+        return {
+            startsWithSymbol: function (text) {
+                var firstChar = text.trim().charAt(0);
+                return /[^\w\s]/.test(firstChar);
+            }
+        };
+    }
+};
+
+var TextProcessorModule = TextProcessorFactory.createProcessor();
+
 var nativeVoice = 1, voices, speechSpeed = 1, info;
 
-var setInput = function() {
+var setInput = function () {
     var a = document.getElementById("ttsInput").value;
-    if(a !== "") {
+    if (a !== "") {
         info = a;
-    }
-    else {
+
+        // Use the Text Processor Module to check if the text starts with a symbol
+        if (TextProcessorModule.startsWithSymbol(info)) {
+            alert("Text starts with a symbol!");
+        }
+    } else {
         info = "Yo... Whazzzup ??? Paste anything here, and press the speak button to convert text into speech !!!";
     }
 }
+
+// Rest of your code...
+
 
 var setSpeed = function(x) {
     var b = document.getElementById("select-speed").value;
@@ -53,6 +74,7 @@ var checkSupport = function() {
 var info = function() {
     alert("How to use ONLINE TTS : \n \n* Press 'i' to highlight the TEXTAREA and \" CTRL+V \" to paste the text or type any text inside it.\n\n* Press \"CTRL+ENTER\" or \"CMD+ENTER\" to speak out the text entered.\n\n* Press \"CTRL+/\" or \"CMD+/\" to stop the speech.\n\n\n");
 }
+
 Mousetrap.bind('i', function() { 
     var x = document.getElementById("ttsInput");
     x.focus();
