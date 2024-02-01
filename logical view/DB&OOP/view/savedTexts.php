@@ -28,19 +28,25 @@ if (!isset($_SESSION['email'])) {
         <h2>Tekstet e ruajtura</h2>
 
         <?php
-        if($savedTexts){ foreach ($savedTexts as $savedText): ?>
+        if ($savedTexts) {
+            foreach ($savedTexts as $savedText):
+        ?>
             <div>
                 <strong>ID:</strong> <?php echo $savedText['id']; ?><br>
                 <strong>Language:</strong> <?php echo $savedText['language']; ?><br>
                 <strong>Text:</strong> <?php echo $savedText['text']; ?><br>
+                <strong>Character Count:</strong> <?php echo strlen($savedText['text']); ?><br>
                 <hr>
             </div>
-        <?php endforeach;
-        }else{
-            ?>
+        <?php
+            endforeach;
+        } else {
+        ?>
             <strong>Nuk ka të dhëna të ruajtura!</strong>
-            <?php
-        } ?>
+        <?php
+        }
+        ?>
+
         <button onclick="window.location.href='../../index.php'">Go to Index</button>
     </body>
     </html>
