@@ -15,9 +15,17 @@ var TextProcessorModule = TextProcessorFactory.createProcessor();
 var nativeVoice = 1, voices, speechSpeed = 1, info;
 
 var setInput = function () {
-    var a = document.getElementById("ttsInput").value;
-    if (a !== "") {
-        info = a;
+    var inputElement = document.getElementById("ttsInput");
+    var enteredText = inputElement.value;
+
+    if (enteredText !== "") {
+        // Limit the text to 256 characters
+        info = enteredText.slice(0, 256);
+
+        // Check if the length of the text exceeds 256 characters
+        if (enteredText.length > 256) {
+            alert("Text exceeds 256 characters. Only the first 256 characters will be used.");
+        }
 
         // Use the Text Processor Module to check if the text starts with a symbol
         if (TextProcessorModule.startsWithSymbol(info)) {
@@ -26,7 +34,12 @@ var setInput = function () {
     } else {
         info = "Yo... Whazzzup ??? Paste anything here, and press the speak button to convert text into speech !!!";
     }
+
+    // Update the input field with the limited text
+    inputElement.value = info;
 }
+
+
 
 
 var setSpeed = function(x) {
