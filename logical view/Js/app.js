@@ -28,8 +28,6 @@ var setInput = function () {
     }
 }
 
-// Rest of your code...
-
 
 var setSpeed = function(x) {
     var b = document.getElementById("select-speed").value;
