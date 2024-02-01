@@ -1,0 +1,36 @@
+Ky raport paraqet rezultatet e testimeve të kryera në kuadër të "Development View" të projektit "Albanian Text-to-Speech Solution".
+ Kjo perspektivë ofron një pamje të detajuar të strukturës së projektit dhe proceseve të përdorura gjatë fazës së zhvillimit.
+
+1. Testimi i Pjesës së Zhvillimit:
+Kemi kryer teste intensive të njësive të ndryshme të kodit burimor për të siguruar që secila pjesë të zhvillohet me saktësi dhe
+ përputhshmëri me specifikatën e projektit.
+
+2. Testimi i Performancës së Kodit:
+Për të vlerësuar efikasitetin e kodit, kemi kryer teste të performancës për të identifikuar dhe adresuar çdo mosrenditje
+ potenciale në ekzekutimin e kodit në kohë reale.
+
+
+3. Testimi i Komunikimit Midis Komponenteve:
+Kemi kryer teste për të siguruar që komunikimi midis komponenteve të ndryshme të zhvilluar brenda projektit është i stabil dhe 
+i përshtatshëm për të siguruar një lëvizje të shpejtë të informacionit.
+
+4. Testimi i Integrimit të Moduleve:
+Kemi verifikuar integrimin dhe bashkërendimin e modulave të ndryshme të zhvilluara në një strukturë të përbashkët, duke siguruar 
+që secili modul funksionon si pjesë e një bërjeje të plotë.
+
+Ky raport është i përshtatshëm për ekipin e zhvillimit dhe ofron një pasqyrë të qartë dhe detajuar të cilësisë dhe integritetit 
+të zhvillimit në kuadër të "Development View". Këto teste janë një hap i rëndësishëm drejt sigurimit të cilësisë dhe performancës 
+së produktit tonë përfundimtar.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+Ky raport paraqet një pasqyrë të detajuar të përpjekjeve të kryera gjatë fazës së zhvillimit të projektit "Albanian Text-to-Speech Solution", 
+duke fokusuar në perspektivën e "Development View". Testet janë kujdesur të mbulojnë çdo aspekt të ndryshëm të strukturës së kodit burimor 
+dhe performancës së tij në kohë reale. Në veçanti, testet e pjesës së zhvillimit janë zhvilluar me intensitet për të siguruar saktësi dhe përputhshmëri
+ me specifikatën e projektit. Testet e performancës së kodit janë përpjekur të identifikojnë dhe adresojnë çdo potencial mosrenditje në ekzekutimin e kodit,
+  duke u fokusuar në efikasitetin e tij. Në lidhje me komunikimin midis komponenteve, testet janë kryer për të siguruar një komunikim të qëndrueshëm dhe efikas 
+  midis komponenteve të ndryshme. Për integrimin e moduleve, ka pasur një verifikim të kujdesshëm për të garantuar një funksionim harmonik dhe njëndërrim të 
+  suksesshëm midis pjesëve të ndryshme të zhvilluara në projekt. Ky raport ofron një shikim të qartë dhe të detajuar të cilësisë dhe integritetit të zhvillimit 
+  në kuadër të "Development View", dhe përmbyll me një theks të rëndësishëm mbi përshtatshmërinë dhe cilësinë e produktit tonë përfundimtar.
