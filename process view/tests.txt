@@ -1,0 +1,29 @@
+Testet e Kryera:
+
+1. Testimi i Përgjithshëm: Kemi kryer një test përgjithshëm të sistemit për të vlerësuar funksionalitetin bazë. 
+Rezultatet kanë treguar një performancë të mirë dhe një aftësi të suksesshme për të konvertuar tekst në zë në gjuhën shqipe.
+
+2.Testimi i Sistemit të Regjistrimit: Kemi kryer testime intensive për sistemin e regjistrimit dhe log-in për të siguruar 
+një regjistrim të suksesshëm të përdoruesve. Ky sistem ka demonstruar stabilitet dhe siguri në përpunimin e të dhënave personale.
+
+3.Testimi i Konvertimit të Tekstit: Kemi zhvilluar teste për të vlerësuar saktësinë dhe cilësinë e konvertimit të tekstit në zë në shqip.
+ Rezultatet e testimeve kanë treguar një performancë të kënaqshme dhe një mbështetje të mirë për gjuhën shqipe.
+
+Provime të Kryera:
+
+1.Testi i Performance-it me Volum të Lartë: Kemi kryer një test për të vlerësuar performancën e sistemit në kushte me volum të lartë
+ të kërkesave. Sistemi ka treguar një performancë të stabilizuar, por ka nevojë për optimizime të vogla për situata ekstreme.
+
+2.Testi i Kompatibilitetit me Platformat e Ndryshme: Kemi testuar sistemin në disa platforma të ndryshme për të siguruar një 
+kompatibilitet të gjerë. Gjithashtu, kemi identifikuar disa sfida teknike që duhet adresuar për të përmirësuar kompatibilitetin.
+
+Provime Jo-funksionale:
+
+1.Testi i Sigurisë: Kemi kryer teste për të identifikuar dhe adresuar potenciale vulerabilitete të sigurisë.
+ Sistemi ka demonstruar një nivel të mirë të sigurisë, por ka nevojë për një vëmendje të vazhdueshme ndaj ristrukturimit të kodit.
+
+2.Testi i Efikasitetit të Burimeve: Kemi vlerësuar efikasitetin e përdorimit të burimeve të sistemit gjatë periudhës 
+së përdorimit intensiv. Këtu kemi identifikuar disa pika të përmirësueshme në optimizimin e përdorimit të burimeve.
+
+Ky raport është hartuar në bazë të rezultateve të testimeve të deritanishme dhe do të përdoret si bazë për përmirësimet e ardhshme
+ në projektin tonë të "Albanian Text-to-Speech Solution".

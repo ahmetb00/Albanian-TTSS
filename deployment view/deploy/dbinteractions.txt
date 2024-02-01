@@ -1,0 +1,32 @@
+Ky dokument është një përshkrim i detajuar për fazën e deploy-it në kuadër të "Development View" për projektin
+ tonë "Albanian Text-to-Speech Solution". Fokusi kryesor i këtij dokumenti është interaksioni i aplikacionit tonë
+  me bazën e të dhënave dhe hapat e nevojshëm për të siguruar një implementim të suksesshëm dhe të qëndrueshëm.
+
+Projekti "Albanian Text-to-Speech Solution" synon të ofrojë një zgjidhje efikase dhe cilësore për konvertimin e 
+tekstit në zë në gjuhën shqipe. Pjesa e deploy-it është një element kritik i këtij projekti, pasi siguron që aplikacioni 
+të funksionojë në mënyrë të përshtatshme dhe të kënaqësishme për përdoruesit.
+
+Në këtë kontekst, interaksioni me bazën e të dhënave është një hap kritik për ruajtjen dhe qasjen e informacionit.
+ Për të arritur këtë, ky dokument ofron një udhëzues të detajuar rreth proceseve kryesore të lidhjes, krijimit të 
+ strukturës së tabelave dhe menaxhimit të të dhënave në bazën e të dhënave.
+
+Lidhja me Bazën e të Dhënave:
+Para se të deplojojmë projektin, është thelbësore të sigurojmë një lidhje të suksesshme me bazën e të dhënave. 
+Kjo përfshin konfigurimet e nevojshme dhe sigurimin e një kanali të qëndrueshëm për transmetimin e informacionit
+ midis aplikacionit dhe bazës së të dhënave.
+
+Krijimi i Strukturës së Tabelave:
+Është e rëndësishme që struktura e tabelave në bazën e të dhënave të jetë e përshtatshme për ruajtjen e tekstit 
+dhe audio. Kjo përfshin krijimin e tabelave, indekseve dhe strukturës së duhur për të optimizuar shfletimin dhe leximin e të dhënave.
+
+Përditësimi i të Dhënave:
+Për të siguruar një sinkronizim të vazhdueshëm, aplikacioni duhet të jetë në gjendje të përditësojë të dhënat në 
+bazën e të dhënave. Kjo përfshin proceset për përditësimin e tabelave me të dhënat e reja.
+
+Backup dhe Rikthim i të Dhënave:
+Në rast të ndonjë problemi, është e rëndësishme të kemi një mekanizëm të backup-it dhe rikthimit të të dhënave.
+ Kjo mund të përfshijë krijimin e kopjeve rezervë të bazës së të dhënave në periudha të rregullta dhe skripte për 
+ rikthimin e tyre në rast të nevojës.
+
+Ky dokument ofron një udhëzues të përshtatshëm për ekipin e zhvillimit dhe siguron një përcaktim të qartë të proceseve 
+të lidhjes dhe menaxhimit të bazës së të dhënave në fazën e deploy-it të projektit tonë "Albanian Text-to-Speech Solution".
