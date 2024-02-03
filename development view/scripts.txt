@@ -1,0 +1,27 @@
+scripts.txt
+
+Këtu janë disa skripta dhe komanda të përdorura në projektin Albanian TTS.
+
+1. Krijimi i tabelave në bazën e të dhënave:
+   - Ekzekutoni skriptën `create-tables.sql` në SQL Management Studio.
+
+2. Ekzekutimi i skriptës për shkarkimin e përdoruesve nga një API të tretë:
+   - Ekzekutoni `php scripts/fetch-users.php`
+
+3. Gjenerimi i raporteve të shfrytëzimit të serverit:
+   - Ekzekutoni `bash scripts/generate-reports.sh`
+
+4. Shtimi i shumë përdoruesve dhe transkriptave:
+   - Ekzekutoni `php scripts/dbinteractions.php`
+
+5. Ndryshimi i konfigurimit të serverit:
+   - Modifikoni dosjen `serverconfig.txt` sipas nevojave.
+
+6. Krijimi i skriptave të rëndësishme të backend:
+   - Krijojini skriptën `backend/scripts/important-script.php`
+
+7. **Debug dhe rregullimi i funksionit për konvertimin në zë (convertTextToSpeech):**
+   - Identifikoni problemet në funksionin `convertTextToSpeech` duke përdorur debugim.
+   - Për të debuguar, shtoni var_dump() ose echo statemente brenda funksionit për të shfaqur vlerat dhe ndërfaqen e brendshme.
+   - Kontrolloni logjet për mesazhe të gabimit gjatë ekzekutimit të testit.
+   - Rregulloni gabimet e identifikuara dhe sigurohuni që funksioni të kthejë rezultatin e duhur dhe të shmangë shpërthimin.

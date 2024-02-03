@@ -1,31 +1,19 @@
+registration.txt
 
+Kjo dosje përmban informacion dhe udhëzime rreth procesit të regjistrimit të përdoruesve në projektin Albanian TTS.
 
-Projekti ynë, "Albanian Text-to-Speech Solution", ka një fokus të veçantë në hartimin e një procesi të regjistrimit të përdoruesve 
-i përshtatur dhe i sigurt. 
-Ky proces është implementuar nëpërmjet një faqe log-in të dedikuar, e cila shërben si hyrje për përdoruesit që dëshirojnë të përfitojnë nga
- funksionaliteti dhe përmbajtja e ofruar nga aplikacioni ynë.
+1. **Struktura e regjistrimit:**
+   - Përdoruesit mund të regjistrohen duke përdorur një formular në faqen kryesore.
+   - Formulari përmban fusha të tilla si emri i përdoruesit, email, fjalëkalimi, dhe konfirmim i fjalëkalimit.
 
-Fajlli "registration.txt" është një dokument i rëndësishëm që detajon me kujdes rregullat dhe kushtet që përdoruesit duhet të 
-ndjekin gjatë procesit të regjistrimit. Kjo përfshin udhëzime të qarta mbi si të plotësohet formulari i regjistrimit, 
-duke përfshirë informacionin e nevojshëm për krijimin e një llogarie personale të sigurtë dhe të identifikuar. 
-Informacioni kyç përfshin elemente si emrin, mbiemrin, adresën e email-it dhe një fjalëkalim të sigurtë për të mbrojtur llogarinë e tyre.
+2. **Validimi i të dhënave:**
+   - Para se të kryhet regjistrimi, bëhet validimi i të dhënave të përdoruesit për të siguruar që janë në formatin e duhur dhe plotësojnë kritere të sigurisë.
 
-Regjistrimi siguron një pasqyrë personalizuar për secilin përdorues, duke i mundësuar atyre të shfrytëzojnë plotësisht avantazhet 
-e ofruara nga aplikacioni. Pas krijimit të llogarisë, përdoruesit kanë mundësinë të regjistrohen në çdo kohë duke përdorur të dhënat
- e tyre personale.
+3. **Krijimi i llogarisë:**
+   - Pas suksesful regjistrimit dhe validimit të të dhënave, krijohet një llogari e re për përdoruesin në bazën e të dhënave.
 
- Projekti ofron një form të regjistrimit ku përdoruesit mund të regjistrohen në këtë form duke ofruar të dhënat e kërkuara, pastaj 
- ata mund të kyçen në platformë, duke ju ofruar mundësia e shfletimit të platformës.
+4. **Dërgimi i konfirmimit:**
+   - Përdoruesit mund të marrin një email konfirmimi pas regjistrimit për të verifikuar llogarinë e tyre.
 
-Me përdorimin e arkitekturës 4+1, ky projekt siguron një organizim të strukturuar të komponenteve të sistemit, duke përmirësuar 
-performancën dhe sigurinë. Në të njëjtën kohë, implementimi i një formulari të sigurt për regjistrim vë në pah kujdesin tonë për 
-sigurinë dhe privatësinë e të dhënave të përdoruesve.
-
-Synimi kryesor i projektit është të krijojë një mjedis të sigurt dhe të përshtatshëm për përdoruesit tanë,
- duke ofruar një përmbajtje të pasur në zë në gjuhën shqipe. Duke rritur përdorueshmërinë dhe duke kujdesur për detajet e regjistrimit,
-  ne synojmë të sigurojmë një përvojë pozitive dhe efikase për komunitetin tonë të përdoruesve.
-
-
-
-
-
+5. **Menaxhimi i gabimeve:**
+   - Nëse ndodh ndonjë gabim gjatë regjistrimit, përdoruesi informohet me një mesazh të përshtatshëm dhe dërgohet përsëri në formularin e regjistrimit për të rregullojë të dhënat e gabuara.

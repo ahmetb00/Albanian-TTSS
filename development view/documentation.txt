@@ -1,38 +1,27 @@
- ---------  DOKUMENTIMI I PROJEKTIT "ALABNIAN TEXT TO SPEECH SOLUTION"  ---------
+documentation.txt
+
+Ky dokument përshkruan strukturën dhe funksionalitetin e projektit Albanian TTS.
+
+Struktura e dosjeve:
+- deployment-view/    : Pjesa e front-end
+- backend/            : Pjesa e backend
+- assets/             : Dosje për resurse të ndryshme
+- DB&OOP/             : Lidhja me databaze dhe MVC
+- index.php           : Dosja kryesore e hyrjes
+- README.md           : Informacion rreth projektit dhe udhëzime për instalim
+
+Dokumentacioni për backend:
+- backend/config/     : Konfigurimet e projektit
+- backend/data-access/: Skriptat për lidhjen me bazën e të dhënave
+- backend/business-logic/ : Skriptat për logjikën e biznesit
+
+Dokumentacioni për deployment view:
+- deployment-view/index.html : Struktura e faqes kryesore
+- deployment-view/styles/    : Stilizimet CSS
+- deployment-view/scripts/   : Skriptat JavaScript
+
+Dokumentacioni për skriptat e përdorura:
+- scripts/dbinteractions.txt : Shembuj të interaksioneve me bazën e të dhënave
+- scripts/serverconfig.txt   : Konfigurime të serverit
 
 
-1. Pamja logjike (Logical View):
-Pamja logjike e dokumentacionit përfshin një përshkrim të strukturës së aplikacionit tonë "Albanian Text-to-Speech Solution".
- Kemi përqendruar në shpjegimin e lidhjeve dhe funksionaliteteve të klasave si MainApp, TextProcessor, SpeechSynthesizer, 
- duke siguruar një kuptim të qartë për grupin e zhvillimit rreth organizimit të komponenteve kryesore të aplikacionit.
-
-2. Pamja e procesit (Process View):
-Në këtë perspektivë, kemi detajuar proceset që ndodhin brenda aplikacionit për të përpunuar tekstin, krijuar zërin, dhe përgatitur audion.
- Kemi prezantuar ndërveprimet midis komponenteve dhe shpjeguar si proceset ndërveprojnë për të realizuar funksionalitetin e aplikacionit.
-
-3. Pamja fizike (Physical View):
-Pamja fizike e dokumentacionit ka përfshirë organizimin e strukturës fizike të sistemit, duke detajuar konfigurimin e serverave, 
-rrjetin, dhe përdorimin e burimeve fizike për zhvillimin dhe ekzekutimin e aplikacionit tonë.
-
-4. Pamja e zhvillimit (Development View):
-Në këtë perspektivë, kemi ofruar një pamje të detajuar të strukturës së projektit të zhvillimit, duke përfshirë mjete të përdorura
- për zhvillimin e aplikacionit, proceset e zhvillimit dhe organizimin e kodit burimor. Kemi siguruar një kuptim të qartë të mënyrës 
- së organizimit dhe strukturimit të kodit.
-
-5. Pamja e skenarit (Scenario View):
-Pamja e skenarit ka prezantuar situata të mundshme të përdorimit të aplikacionit, duke ofruar një kuptim praktik të mënyrës 
-se si përdoruesit mund të shfrytëzojnë funksionet e ofruara nga "Albanian Text-to-Speech Solution".
-
-Ky dokument i dokumentacionit ofron një pasqyrë holistike të projektit tonë, duke ofruar një kuptim të plotë të strukturës, 
-proceseve, dhe përdorimit të sistemit. Është një burim i vlefshëm për ekipin e zhvillimit dhe palët tjera të interesuara për projektin tonë.
-
-------------------------------------------------------------------------------------------
-
-
-Dokumentacioni i projektit tonë "Albanian Text-to-Speech Solution" është një resurs i rëndësishëm që kapitullon me kujdes të gjitha
- detajet e aplikacionit. Përmes aplikimit të modelit 4+1 për dokumentim, kemi krijuar një përshkrim të hollësishëm që pasqyron strukturën
-  logjike të aplikacionit, proceset që ndodhin në këtë kontekst, organizimin fizik të infrastrukturës, si dhe detaje të zhvillimit dhe 
-  skenarët e përdorimit. Kjo dokumentacion ka si synim të ofrojë një udhërrëfyes të qartë dhe të përpiktë për ekipin e zhvillimit, 
-  duke përfshirë gjithçka nga lidhjet midis klasave në nivel logjik, deri te përdorimi i burimeve fizike dhe skenarët realistë të 
-  përdorimit të aplikacionit. Ky dokument është një burim i rëndësishëm për të kuptuar thellësisht projektin dhe për të shpërndarë
-   njohurinë në mënyrë të qëndrueshme brenda ekipit të zhvillimit dhe ndër palët e interesuara.

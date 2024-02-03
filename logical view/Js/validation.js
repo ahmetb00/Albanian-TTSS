@@ -1,32 +1,26 @@
-// Validator Factory
-var LoginFormValidatorFactory = {
-  createValidator: function () {
-      return {
-          validate: function () {
-              var email = document.forms["loginForm"]["email"].value;
-              var password = document.forms["loginForm"]["password"].value;
+function validateLoginForm() {
+  var email = document.forms["loginForm"]["email"].value;
+  var password = document.forms["loginForm"]["password"].value;
 
-              if (email == "") {
-                  showAlert("Please enter your email");
-                  return false;
-              } else if (!validateEmail(email)) {
-                  showAlert("Please enter a valid email");
-                  return false;
-              }
-
-              if (password == "") {
-                  showAlert("Please enter your password");
-                  return false;
-              } else if (password.length < 8 || password.length > 12) {
-                  showAlert("Password should be between 8 and 12 characters");
-                  return false;
-              }
-
-              return true;
-          }
-      };
+  if (email == "") {
+    showAlert("Please enter your email");
+    return false;
+  } else if (!validateEmail(email)) {
+      showAlert("Please enter a valid email");
+      return false;
   }
-};
+
+  if (password == "") {
+    showAlert("Please enter your password");
+    return false;
+  } else if (password.length < 8 || password.length > 12) {
+      showAlert("Password should be between 8 and 12 characters");
+      return false;
+  }
+
+  return true;
+return loginFormValidator.validate();
+}
 
 // Create an instance of the validator
 var loginFormValidator = LoginFormValidatorFactory.createValidator();

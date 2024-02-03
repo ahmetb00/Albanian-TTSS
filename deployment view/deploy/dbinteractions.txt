@@ -1,32 +1,26 @@
-Ky dokument është një përshkrim i detajuar për fazën e deploy-it në kuadër të "Development View" për projektin
- tonë "Albanian Text-to-Speech Solution". Fokusi kryesor i këtij dokumenti është interaksioni i aplikacionit tonë
-  me bazën e të dhënave dhe hapat e nevojshëm për të siguruar një implementim të suksesshëm dhe të qëndrueshëm.
+Db interactions::
 
-Projekti "Albanian Text-to-Speech Solution" synon të ofrojë një zgjidhje efikase dhe cilësore për konvertimin e 
-tekstit në zë në gjuhën shqipe. Pjesa e deploy-it është një element kritik i këtij projekti, pasi siguron që aplikacioni 
-të funksionojë në mënyrë të përshtatshme dhe të kënaqësishme për përdoruesit.
+dbinteractions.txt
 
-Në këtë kontekst, interaksioni me bazën e të dhënave është një hap kritik për ruajtjen dhe qasjen e informacionit.
- Për të arritur këtë, ky dokument ofron një udhëzues të detajuar rreth proceseve kryesore të lidhjes, krijimit të 
- strukturës së tabelave dhe menaxhimit të të dhënave në bazën e të dhënave.
-
-Lidhja me Bazën e të Dhënave:
-Para se të deplojojmë projektin, është thelbësore të sigurojmë një lidhje të suksesshme me bazën e të dhënave. 
-Kjo përfshin konfigurimet e nevojshme dhe sigurimin e një kanali të qëndrueshëm për transmetimin e informacionit
- midis aplikacionit dhe bazës së të dhënave.
-
-Krijimi i Strukturës së Tabelave:
-Është e rëndësishme që struktura e tabelave në bazën e të dhënave të jetë e përshtatshme për ruajtjen e tekstit 
-dhe audio. Kjo përfshin krijimin e tabelave, indekseve dhe strukturës së duhur për të optimizuar shfletimin dhe leximin e të dhënave.
-
-Përditësimi i të Dhënave:
-Për të siguruar një sinkronizim të vazhdueshëm, aplikacioni duhet të jetë në gjendje të përditësojë të dhënat në 
-bazën e të dhënave. Kjo përfshin proceset për përditësimin e tabelave me të dhënat e reja.
-
-Backup dhe Rikthim i të Dhënave:
-Në rast të ndonjë problemi, është e rëndësishme të kemi një mekanizëm të backup-it dhe rikthimit të të dhënave.
- Kjo mund të përfshijë krijimin e kopjeve rezervë të bazës së të dhënave në periudha të rregullta dhe skripte për 
- rikthimin e tyre në rast të nevojës.
-
-Ky dokument ofron një udhëzues të përshtatshëm për ekipin e zhvillimit dhe siguron një përcaktim të qartë të proceseve 
-të lidhjes dhe menaxhimit të bazës së të dhënave në fazën e deploy-it të projektit tonë "Albanian Text-to-Speech Solution".
+# Shtimi i shumë përdoruesve me tabela më komplekse
+INSERT INTO users (username, email, password, full_name, date_of_birth, registration_date) VALUES
+    ('john_doe', 'john.doe@example.com', 'hashed_password_1', 'John Doe', '1980-01-15', '2022-02-01'),
+    ('jane_smith', 'jane.smith@example.com', 'hashed_password_2', 'Jane Smith', '1992-05-22', '2022-02-02'),
+    ('alice_jones', 'alice.jones@example.com', 'hashed_password_3', 'Alice Jones', '1985-09-10', '2022-02-03'),
+    ('bob_jackson', 'bob.jackson@example.com', 'hashed_password_4', 'Bob Jackson', '1978-03-03', '2022-02-04'),
+    ('emma_white', 'emma.white@example.com', 'hashed_password_5', 'Emma White', '1998-11-28', '2022-02-05'),
+    ('michael_brown', 'michael.brown@example.com', 'hashed_password_6', 'Michael Brown', '1987-07-18', '2022-02-06'),
+    ('sophia_taylor', 'sophia.taylor@example.com', 'hashed_password_7', 'Sophia Taylor', '1995-12-12', '2022-02-07'),
+    ('david_miller', 'david.miller@example.com', 'hashed_password_8', 'David Miller', '1983-08-25', '2022-02-08'),
+    ('olivia_clark', 'olivia.clark@example.com', 'hashed_password_9', 'Olivia Clark', '1990-04-05', '2022-02-09'),
+    ('ryan_hall', 'ryan.hall@example.com', 'hashed_password_10', 'Ryan Hall', '1989-06-30', '2022-02-10'),
+    ('emily_smith', 'emily.smith@example.com', 'hashed_password_11', 'Emily Smith', '1993-09-20', '2022-02-11'),
+    ('william_jones', 'william.jones@example.com', 'hashed_password_12', 'William Jones', '1981-02-14', '2022-02-12'),
+    ('mia_jackson', 'mia.jackson@example.com', 'hashed_password_13', 'Mia Jackson', '1996-07-08', '2022-02-13'),
+    ('ethan_davis', 'ethan.davis@example.com', 'hashed_password_14', 'Ethan Davis', '1979-10-03', '2022-02-14'),
+    ('ava_wilson', 'ava.wilson@example.com', 'hashed_password_15', 'Ava Wilson', '1997-04-22', '2022-02-15'),
+    ('jackson_thomas', 'jackson.thomas@example.com', 'hashed_password_16', 'Jackson Thomas', '1986-11-15', '2022-02-16'),
+    ('emma_martin', 'emma.martin@example.com', 'hashed_password_17', 'Emma Martin', '1984-05-07', '2022-02-17'),
+    ('noah_anderson', 'noah.anderson@example.com', 'hashed_password_18', 'Noah Anderson', '1994-08-19', '2022-02-18'),
+    ('sophie_wilson', 'sophie.wilson@example.com', 'hashed_password_19', 'Sophie Wilson', '1982-12-25', '2022-02-19'),
+    ('liam_thomas', 'liam.thomas@example.com', 'hashed_password_20', 'Liam Thomas', '1991-03-08', '2022-02-20');

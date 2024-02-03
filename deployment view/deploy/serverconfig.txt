@@ -1,36 +1,26 @@
 
 Konfigurimi i Serverit për "Albanian Text-to-Speech Solution" - Development View
 
-Ky dokument është një përshkrim i detajuar i konfigurimit të serverit në kuadër të "Development View" për projektin
- "Albanian Text-to-Speech Solution". Qëllimi kryesor i këtij dokumenti është të udhëhoqë dhe dokumentojë proceset e 
- nevojshme për të konfiguruar serverin dhe siguruar një ambient të përshtatshëm për zhvillimin dhe deploy-in e aplikacionit tonë.
 
-Projekti "Albanian Text-to-Speech Solution" synon të ofrojë një zgjidhje efikase dhe cilësore për konvertimin e tekstit 
-në zë në gjuhën shqipe. Për të arritur këtë, konfigurimi i serverit është një hap kyç për të siguruar një infrastrukturë 
-stabile dhe të përshtatshme për funksionimin e aplikacionit.
+<?php 
 
-Zgjedhja e Platformës dhe Gjuhës së Programimit:
-Para se të konfigurojmë serverin, është e rëndësishme të identifikojmë platformën dhe gjuhën e programimit që do të përdoret. 
-Për projektin tonë, kemi zgjedhur teknologjine html,css,Javascript dhe php.
-
-Instalimi i Bibliotekave dhe Pajisjeve të Nevojshme:
-Pas zgjedhjes së platformës, sigurohuni që të keni instaluar të gjitha bibliotekat dhe pajisjet e nevojshme për aplikacionin tuaj. 
-Kjo përfshin libraritë e nevojshme për përpunimin e tekstit, krijimin e zërit, dhe menaxhimin e bazës së të dhënave.
+class DBConnection{
+    private $server="localhost";
+    private $username="root";
+    private $password="";
+    private $database="albanian_tts";
 
 
-Konfigurimi i Parametrave të Aplikacionit:
-Përshtatni konfigurimet e aplikacionit për të reflektuar nevojat dhe specifikat e projektit. Kjo përfshin parametrat e lidhjes 
-me bazën e të dhënave, konfigurimin e rrjetit, dhe cilësimet tjera të aplikacionit.
+    function startConnection(){
+        try{
+            $conn = new PDO("mysql:host=$this->server;dbname=$this->database;",$this->username,$this->password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            return $conn;
+        }catch(PDOException $e){
+            echo "Connection Failed ". $e->getMessage();
+            return null;
+        }
+    }
+}
 
-Sigurimi i Serverit:
-Për të garantuar sigurinë e serverit, implementojeni mekanizma të sigurisë si autentikim dhe autorizim. Për projekte të tilla që 
-manipulojnë informacion të ndjeshëm, sigurimi është një prioritet.
-
-Monitorimi dhe Përmirësimi i Performancës:
-Përdorni mjete për monitorimin e performancës së serverit dhe identifikoni çdo potencial për përmirësim. Ky hibrid midis monitorimit
- dhe përmirësimit të performancës do të sigurojë që serveri të jetë i aftë për të trajtuar befasitë dhe për të ofruar një përvojë 
- të përdoruesit sa më të mirë.
-
-Ky dokument ofron një rrugë të qartë dhe të përpiktë drejt konfigurimit të serverit në kuadër të "Development View" për projektin 
-"Albanian Text-to-Speech Solution". Përdorni këtë udhëzues si bazë për të siguruar një ambient zhvillimi të qëndrueshëm dhe 
-funksional për aplikacionin tuaj.
+?>

@@ -53,7 +53,7 @@ if(isset($_SESSION['email'])){
         <div class="form-content">
           <div class="login-form">
             <div class="title">Kyqu</div>
-            <form name="loginForm" action="../controller/loginController.php" onsubmit="return validateLoginForm()" method="POST">
+            <form name="loginForm" action="../model/loginModel.php" onsubmit="return validateLoginForm()" method="POST">
               <div class="input-boxes">
                 <div class="input-box">
                   <i class="fas fa-envelope"></i>
@@ -73,7 +73,7 @@ if(isset($_SESSION['email'])){
           </div>
           <div class="signup-form">
             <div class="title">Regjistrohuni</div>
-            <form name="signupForm" action="../controller/registerController.php" onsubmit="return validateSignupForm()" method="POST">
+            <form name="signupForm" action="../model/registerController.php" onsubmit="return validateSignupForm()" method="POST">
               <div class="input-boxes">
                 <div class="input-box">
                   <i class="fas fa-user"></i>
