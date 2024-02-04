@@ -42,35 +42,92 @@ function validateEmail(email) {
   return email.includes("@");
 }
 
-
+// state pattern
 function validateSignupForm() {
-    var name = document.forms["signupForm"]["name"].value;
-    var email = document.forms["signupForm"]["email"].value;
-    var password = document.forms["signupForm"]["password"].value;
-  
-    if (name == "") {
-      showAlert("Please enter your name");
+  const form = document.forms["signupForm"];
+  const name = form["name"].value;
+  const email = form["email"].value;
+  const password = form["password"].value;
+
+  const stateContext = {
+    currentState: new InitialState(),
+    showAlert: (message) => showAlert(message)
+  };
+
+  return stateContext.currentState.validate(name, email, password);
+}
+
+class InitialState {
+  validate(name, email, password) {
+    if (name === "") {
+      this.showAlert("Please enter your name");
       return false;
     }
-  
-    if (email == "") {
-      showAlert("Please enter your email");
+
+    return this.transitionToNextState();
+  }
+
+  transitionToNextState() {
+    return new EmailValidationState();
+  }
+
+  showAlert(message) {
+    alert(message);
+  }
+}
+
+class EmailValidationState {
+  validate(name, email, password) {
+    if (email === "") {
+      this.showAlert("Please enter your email");
       return false;
     } else if (!validateEmail(email)) {
-        showAlert("Please enter a valid email");
-        return false;
+      this.showAlert("Please enter a valid email");
+      return false;
     }
-  
-    if (password == "") {
-      showAlert("Ju lutem shënoni fjalëkalimin tuaj");
+
+    return this.transitionToNextState();
+  }
+
+  transitionToNextState() {
+    return new PasswordValidationState();
+  }
+
+  showAlert(message) {
+    alert(message);
+  }
+}
+
+class PasswordValidationState {
+  validate(name, email, password) {
+    if (password === "") {
+      this.showAlert("Ju lutem shënoni fjalëkalimin tuaj");
       return false;
     } else if (password.length < 8 || password.length > 12) {
-        showAlert("Fjalëkalimi duhet jetë nga 8 deri 12 karaktere");
-        return false;
+      this.showAlert("Fjalëkalimi duhet jetë nga 8 deri 12 karaktere");
+      return false;
     }
-  
+
     return true;
+  }
+
+  transitionToNextState() {
+    return this; // Final state, no transition
+  }
+
+  showAlert(message) {
+    alert(message);
+  }
 }
+
+function validateEmail(email) {
+  return true; 
+}
+// Modeli i gjendjes organizon logjikën e vlefshmërisë në gjendje të ndryshme, secila përgjegjëse për një aspekt specifik të vërtetimit.
+// Funksioni validateSignupForm inicializon gjendjen në gjendjen "Initial" dhe thërret logjikën e vlefshmërisë për atë gjendje.
+// Nëse vërtetimi është i suksesshëm, ai kalon në gjendjen tjetër, duke përsëritur procesin derisa të arrihet gjendja përfundimtare.
+// Çdo shtet i njeh rregullat e tij të vlefshmërisë dhe mund të kalojë në gjendjen tjetër bazuar në suksesin e vërtetimit të gjendjes aktuale.
+// Ky model ndihmon në ndarjen e shqetësimeve dhe organizimin e logjikës komplekse, duke e bërë kodin më të mirëmbajtur.
 
 function validateEmail(email) {
     var emailRegex = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
